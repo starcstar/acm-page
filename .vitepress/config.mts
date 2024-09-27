@@ -5,6 +5,9 @@ export default defineConfig({
   title: "NUAAXCPC Docs",
   description: "NUAA ACM Team",
   lang: 'zh-CN',
+  sitemap: {
+    hostname: 'https://acm.starcstar.club'
+  },
   head: [
     ['link', { rel: 'icon', href: '/acm.png' }]
   ],
