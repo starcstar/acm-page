@@ -1,6 +1,13 @@
-# NUAA XCPC Wiki
+---
+layout: home
 
-这是南京航空航天大学ACM集训队的Wiki
+hero:
+  name: NUAAXCPC Wiki
+---
+
+# NUAA XCPC Wiki :partying_face:
+
+这是南京航空航天大学ACM集训队的Wiki 
 
 在右上角切换栏目，查看不同的内容
 
