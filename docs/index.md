@@ -1,4 +1,4 @@
-# NUAAXCPC Team
+# NUAA XCPC Wiki
 
 这是南京航空航天大学ACM集训队的Wiki
 
