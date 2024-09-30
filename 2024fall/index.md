@@ -16,7 +16,7 @@ sidebar: ['2024fall/sidebar.md']
 
 [B站录播](https://www.bilibili.com/video/BV1e7xEeeERp)
 
-[第二周讲义](./week2)
+[第二周讲义](./week2/)
 
 [幻灯片(PDF)](./week2.pdf)
 
