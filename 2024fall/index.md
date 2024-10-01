@@ -2,8 +2,6 @@
 lang: zh-CN
 title: ACM 竞赛队新生培训 2024秋
 description: ACM 竞赛队新生培训 2024秋
-
-sidebar: ['2024fall/sidebar.md']
 ---
 
 # ACM 竞赛队新生培训 2024秋
