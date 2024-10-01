@@ -10,6 +10,8 @@ sidebar: ['2024fall/sidebar.md']
 
 ## 第一周: 介绍XCPC、IDE的使用 <Badge type="tip" text="@天目湖B8-119 Sep 22 19:00-20:00" />
 
+[B站录播](https://www.bilibili.com/video/BV153sQe9EFb)
+
 // To be updated
 
 ## 第二周: C++ 基础 <Badge type="tip" text="@天目湖B8-119 Sep 26 19:00-20:00" />
