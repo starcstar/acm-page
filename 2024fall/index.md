@@ -18,7 +18,7 @@ description: ACM 竞赛队新生培训 2024秋
 
 [第二周讲义](./week2/)
 
-[幻灯片(PDF)](./week2.pdf)
+[幻灯片(PDF)](./week2/week2.pdf)
 
 #### 课程内容
 
