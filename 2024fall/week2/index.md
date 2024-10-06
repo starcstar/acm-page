@@ -6,7 +6,7 @@ cafébabe
 
 2024-09-26
 
-[幻灯片(PDF)](week2.pdf)
+[幻灯片(PDF)](../week2.pdf)
 
 ## 课程相关 Course Links
 
