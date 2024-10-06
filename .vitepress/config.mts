@@ -27,7 +27,8 @@ export default defineConfig({
           { text: '主页', link: '/' },
           {
             text: 'ACM 竞赛队新生培训 2024秋', link: '/2024fall/', items: [
-              { text: 'Week2 C++语言基础I', link: '/2024fall/week2' },
+              { text: 'Week2 C++ 语法基础 I', link: '/2024fall/week2' },
+              { text: 'Week3 C++ 语法基础 Ⅱ', link: '/2024fall/week3' },
             ]
           }
         ]
