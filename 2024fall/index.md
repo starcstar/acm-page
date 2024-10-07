@@ -20,7 +20,7 @@ description: ACM 竞赛队新生培训 2024秋
 
 [第二周讲义](./week2/)
 
-[幻灯片(PDF)](./week2.pdf)
+[幻灯片(PDF)-校内查看](https://pan.nuaa.edu.cn/share/45fb681c82f4159a7851616ce2)
 
 
 ## 第三周: C++ 语法基础Ⅱ <Badge type="tip" text="@天目湖B8-119 Oct 10 19:00-20:00" />
@@ -31,5 +31,5 @@ description: ACM 竞赛队新生培训 2024秋
 
 [第三周讲义](./week3/)
 
-[幻灯片(PDF)](./week3.pdf)
+[幻灯片(PDF)-校内查看](https://pan.nuaa.edu.cn/share/29ded6b0258e074e54a27d13b7)
 
