@@ -209,7 +209,7 @@ int main(){
 
 
 
-## 引用与 swap
+### 引用与 swap
 
 本质是一个别名
 
@@ -240,13 +240,15 @@ int main(){
 
 引用主要分为两种，左值引用和右值引用。此外还有两种特殊的引用：转发引用和垂悬引用，不作详细介绍。
 
-
+:::
 
 ### 递归
 
 调用自己
 
-```cpp
+::: code-group
+
+```cpp [C++]
 #include<iostream>
 using namespace std;
 
@@ -262,6 +264,13 @@ int main(){
 }
 ```
 
+```python [Python 3]
+def print(x):
+    if x//1000:
+        print(x//1000)
+    print("_"+str(x%1000),end="")
+```
+:::
 
 
 # STL 入门
