@@ -1,11 +1,11 @@
 ---
-marp: true
+marp: false
 theme: beam
 paginate: true
 size: 4:3
 header: C++ 语法基础
 footer: 南京航空航天大学程序设计竞赛队
-title: Marp custom themes
+title: C++ 语法基础 Ⅱ
 ---
 
 <!-- _class: title -->
@@ -325,4 +325,9 @@ int main(){
 
 ---
 
-# Practice is all you need
+# Practice is all you need !
+
+<br>
+<br>
+
+![width:400px](https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=Cgk0OTE0OTQ3MzYSFC83m-eWnqwXBwPVKNoqR0wqqBcwGJzIByD_CiiT8JynkISJAzIEcHJvZFCAvaMB&spec=0&rkey=CAISKKSBekjVG1fMRhWxKzITIFFM8i1wUuKfriR83g4qbAP7PDlw2eox26Y%27,)

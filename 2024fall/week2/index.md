@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # C++ 语法基础
 
 $By\ CAFEBABE$
