@@ -3,22 +3,25 @@ marp: true
 theme: beam
 paginate: true
 size: 4:3
-header: C++ 语法基础Ⅱ
+header: C++ 语法基础
 footer: 南京航空航天大学程序设计竞赛队
-title: C++ 语法基础Ⅱ
+title: Marp custom themes
 ---
+
 <!-- _class: title -->
+
 # C++ 语法基础 Ⅱ
+尝试用最短时间学会写程序
 
 AtomFirst
 南京航空航天大学
-2024-10-10
+2024-10-12
 
 ---
 
 # 目录
 
-- 为什么要学编程
+- 引论
 - 最小完备程序
 - 函数与递归
 - STL 入门
@@ -27,7 +30,7 @@ AtomFirst
 
 ---
 
-# 为什么要学编程
+# 引论
 
 ## 解决问题的两个步骤
 
@@ -79,7 +82,7 @@ int a=5; // 声明了一个int类型的变量，并赋值为5
 
 ## int 的基本运算
 
-可以对两个 `int` 类型的变量进行加减乘除和取模（求余数）
+可以对两个 `int` 类型的值进行加减乘除和取模（求余数）
 
 ```cpp
 #include<iostream>
@@ -242,9 +245,11 @@ int main(){
 using namespace std;
 
 void print(int x){
-    if(x/1000)
+    if(x/1000){
         print(x/1000);
-    cout<<"_"<<x%1000;
+        cout<<'_';
+    }
+    cout<<x%1000;
 }
 
 int main(){
@@ -317,3 +322,7 @@ int main(){
 
 1. 学一点 `C++` （能写就行，参考上面）
 2. [多](https://codeforces.com/profile/DGME) [写 题](https://zhuanlan.zhihu.com/p/651241833)
+
+---
+
+# Practice is all you need

@@ -1,16 +1,20 @@
-# C++ 语法基础 Ⅱ
+---
+lang: zh-CN
+description: C++ 语法基础 Ⅱ 与 STL 入门
+---
+# C++ 语法基础 Ⅱ 与 STL 入门
 
-~~Practice Is All You Need~~
+~~尝试用最短时间学会写程序~~ $Practice\ Is\ All\ You\ Need$
 
-AtomFirst
+$AtomFirst$
 
 南京航空航天大学
 
-2024-10-10
+2024-10-12
 
 [幻灯片(PDF)](../week3.pdf)
 
-## 为什么要学编程
+## 引论
 
 ### 解决问题的两个步骤
 
@@ -21,7 +25,7 @@ AtomFirst
 
 ### 怎么学 Coding
 
-- 得到最基本的 `knowledge` （在[这节课及上节课](https://acm.starcstar.club/2024fall/)）
+- 得到最基本的 `knowledge` （在这节课及[上节课](../week2/)中学习 C++ 语法）
 - 进行有质量的 `practice` （在 [OJ](https://www.luogu.com.cn/problem/P1001) 上提交你的代码）
 - 现有 `knowledge` 不足后，进行新的 `knowledge-practice 循环` （从书本、网课或者[线上教程](https://www.runoob.com/cplusplus/cpp-tutorial.html)中学习新知识，然后在 OJ 上进行练习）
 
@@ -59,7 +63,7 @@ int a=5; // 声明了一个int类型的变量，并赋值为5
 ```
 
 ::: tip
-变量是一个盒子，可以往里面存东西，也可以从里面取东西或
+变量是一个盒子，可以往里面放东西
 :::
 
 ### int 的基本运算
@@ -81,7 +85,7 @@ int main(){
 }
 ```
 
-::: details
+::: tip
 加法 `+`、减法 `-`、乘法 `*`、除法 `/` 和取模 `%` 是最基本的运算符
 :::
 
@@ -124,8 +128,9 @@ int main(){
 #include<iostream>
 using namespace std;
 
-int main(){
-    int x; cin>>x;
+int main() {
+    int x;
+    cin>>x;
     if(x>0){
         cout<<1;
     }else{
@@ -135,7 +140,7 @@ int main(){
 }
 ```
 
-::: details
+::: tip
 `if` 语句用于判断条件是否成立，`else` 语句用于处理条件不成立的情况
 :::
 
@@ -269,6 +274,8 @@ def print(x):
     if x//1000:
         print(x//1000)
     print("_"+str(x%1000),end="")
+
+print(1145141919)
 ```
 :::
 
