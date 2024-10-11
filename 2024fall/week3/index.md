@@ -350,3 +350,5 @@ int main(){
 
 1. 学一点 `C++` （能写就行，参考上面）
 2. [多](https://codeforces.com/profile/DGME) [写 题](https://zhuanlan.zhihu.com/p/651241833)
+
+![kangroo](https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=Cgk0OTE0OTQ3MzYSFC83m-eWnqwXBwPVKNoqR0wqqBcwGJzIByD_CiiT8JynkISJAzIEcHJvZFCAvaMB&spec=0&rkey=CAISKKSBekjVG1fMRhWxKzITIFFM8i1wUuKfriR83g4qbAP7PDlw2eox26Y%27,)

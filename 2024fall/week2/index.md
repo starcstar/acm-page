@@ -1,10 +1,9 @@
 ---
 marp: true
 ---
-
 # C++ 语法基础
 
-$By\ CAFEBABE$
+$CAFEBABE$
 
 南京航空航天大学
 

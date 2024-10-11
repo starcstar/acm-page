@@ -1,5 +1,5 @@
 ---
-marp: false
+marp: true
 theme: beam
 paginate: true
 size: 4:3
@@ -325,9 +325,9 @@ int main(){
 
 ---
 
-# Practice is all you need !
+# Practice is all you need!
 
 <br>
 <br>
 
-![width:400px](https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=Cgk0OTE0OTQ3MzYSFC83m-eWnqwXBwPVKNoqR0wqqBcwGJzIByD_CiiT8JynkISJAzIEcHJvZFCAvaMB&spec=0&rkey=CAISKKSBekjVG1fMRhWxKzITIFFM8i1wUuKfriR83g4qbAP7PDlw2eox26Y%27,)
+![bg 40%](https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=Cgk0OTE0OTQ3MzYSFC83m-eWnqwXBwPVKNoqR0wqqBcwGJzIByD_CiiT8JynkISJAzIEcHJvZFCAvaMB&spec=0&rkey=CAISKKSBekjVG1fMRhWxKzITIFFM8i1wUuKfriR83g4qbAP7PDlw2eox26Y%27,)
