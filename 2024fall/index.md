@@ -33,3 +33,6 @@ description: ACM 竞赛队新生培训 2024秋
 
 [幻灯片(PDF)-校内查看](https://pan.nuaa.edu.cn/share/29ded6b0258e074e54a27d13b7)
 
+## 第四周: 数学基础和算法入门 <Badge type="tip" text="尚未确定" />
+
+本节课将介绍一些简单算法，以及一部分数学基础知识。
