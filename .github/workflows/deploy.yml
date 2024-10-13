@@ -46,26 +46,8 @@ jobs:
         with:
           name: build
           path: .vitepress/dist
-
-  # 部署工作
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          fetch-depth: 0
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: build
-          path: .vitepress/dist
-      - name: Deploy to gh-pages branch
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .
-          git commit -m 'Deploy to gh-pages branch'
-          git push origin HEAD:gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
