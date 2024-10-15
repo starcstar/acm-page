@@ -8,9 +8,9 @@ description: ACM 竞赛队新生培训 2024秋
 
 ## 第一周: 介绍XCPC、IDE的使用 <Badge type="tip" text="@天目湖B8-119 Sep 22 19:00-20:00" />
 
-[B站录播](https://www.bilibili.com/video/BV153sQe9EFb)
+本节课介绍了XCPC的基本概念，程序设计竞赛的基本知识，以及IDE的使用。
 
-// To be updated
+[B站录播](https://www.bilibili.com/video/BV153sQe9EFb)
 
 [幻灯片(PDF)-校内查看](https://pan.nuaa.edu.cn/share/9172463a57437ac2b29e63b87b)
 
@@ -38,3 +38,5 @@ description: ACM 竞赛队新生培训 2024秋
 ## 第四周: 数学基础和算法入门 <Badge type="tip" text="@天目湖B8-119 Oct 18 19:00-20:00" />
 
 本节课将介绍一些简单算法，以及一部分数学基础知识。并介绍时间复杂度这一概念
+
+// To be updated
