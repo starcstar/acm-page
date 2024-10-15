@@ -1,10 +1,10 @@
 ---
-lang: zh-CN
-description: C++ 语法基础 Ⅱ 与 STL 入门
+math: mathjax
+prev:
+  text: 'C++ 语法基础'
+  link: '../week2/'
 ---
 # C++ 语法基础 Ⅱ 与 STL 入门
-
-~~尝试用最短时间学会写程序~~ $Practice\ Is\ All\ You\ Need$
 
 $AtomFirst$
 

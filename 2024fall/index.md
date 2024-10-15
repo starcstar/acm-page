@@ -12,6 +12,8 @@ description: ACM 竞赛队新生培训 2024秋
 
 // To be updated
 
+[幻灯片(PDF)-校内查看](https://pan.nuaa.edu.cn/share/9172463a57437ac2b29e63b87b)
+
 ## 第二周: C++ 语法基础Ⅰ <Badge type="tip" text="@天目湖B8-119 Sep 26 19:00-20:00" />
 
 本节课介绍了C++的基本语法，包括数据类型、控制结构、函数、数组和结构体等内容。

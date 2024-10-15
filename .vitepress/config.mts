@@ -1,11 +1,22 @@
 import { defineConfig } from 'vitepress'
+import { generateSidebar } from 'vitepress-sidebar';
+
+const vitepressSidebarOptions = {
+  /* Options... */
+  useTitleFromFrontmatter: true,
+  useTitleFromFileHeading: true,
+  useFolderTitleFromIndexFile: true,
+  //includeFolderIndexFile: true,
+  //includeRootIndexFile: true,
+  useFolderLinkFromIndexFile: true,
+  excludeFilesByFrontmatterFieldName: 'marp',
+};
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "NUAAXCPC Wiki",
   description: "NUAA*CPC Team",
   lang: 'zh-CN',
-
   sitemap: {
     hostname: 'https://acm.starcstar.club'
   },
@@ -14,26 +25,14 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/acm.png' }]
   ],
   themeConfig: {
+    logo: '/acm.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
       { text: 'ACM 竞赛队新生培训 2024秋', link: '/2024fall' }
     ],
 
-    sidebar: [
-      {
-        text: 'NUAAXCPC Docs',
-        items: [
-          { text: '主页', link: '/' },
-          {
-            text: 'ACM 竞赛队新生培训 2024秋', link: '/2024fall/', items: [
-              { text: 'Week2 C++ 语法基础 I', link: '/2024fall/week2' },
-              { text: 'Week3 C++ 语法基础 Ⅱ', link: '/2024fall/week3' },
-            ]
-          }
-        ]
-      }
-    ],
+    sidebar: generateSidebar(vitepressSidebarOptions),
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/starcstar/acm-page' }
