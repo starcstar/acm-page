@@ -6,7 +6,7 @@ export default {
     ...DefaultTheme,
     enhanceApp: (ctx) => {
         googleAnalytics({
-            id: 'GTM-KVJF8W5L', // Replace with your GoogleAnalytics ID, which should start with the 'G-'
+            id: 'G-G8GBZPDD1F', // Replace with your GoogleAnalytics ID, which should start with the 'G-'
         })
     }
 }
