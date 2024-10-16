@@ -158,7 +158,72 @@ $$T(n) = O(f(n))$$
 
 4. 用大 $O$ 表示法描述增长率：使用大 $O$ 表示法来描述执行次数与输入规模之间的关系。
 
+### 计算基本操作的执行次数
+以下是一些基本操作：
 
+加减乘除：一般来说认为是 $O(1)$。
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 3, b = 5;
+    int c = a + b, d = a * b, e = a - b, f = b / a;
+    cout << c << " " << d << " " << e << " " << f << endl;
+    return 0;
+}
+```
+---
+
+线性搜索：在数组中查找一个元素，需要遍历整个数组，时间复杂度为 $O(n)$。
+
+```cpp
+int search(const int arr[], int n, int x) {
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == x) return i;
+    }
+    return -1;
+}
+```
+
+---
+
+二分搜索、快速幂：每次比较将搜索范围减半，时间复杂度为 $O(\log n)$。
+
+```cpp
+int binarySearch(const int arr[], int left, int right, int target) {
+    while (left <= right) {
+        int mid = left + (right - left) / 2; 
+        if (arr[mid] == target) {
+            return mid;
+        }
+        if (arr[mid] < target) {
+            left = mid + 1;
+        }
+        else {
+            right = mid - 1;
+        }
+    }
+    return -1;
+}
+```
+
+---
+
+插入排序、冒泡排序：对于每个元素，可能需要遍历之前排序好的所有元素，时间复杂度为 $O(n^{2})$。
+
+```cpp
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}
+```
 
 ### 分析算法结构
 考虑以下几种常见的算法结构：
@@ -319,3 +384,28 @@ string ten_to_x(int n, int x)  //十进制转 x 进制函数。
 - 右移 `>>`：将操作数的所有二进制位向右移动指定的位数，左边补符号位（对于有符号数）或0（对于无符号数）。
 
 不难看出，左移$n$位相当于乘以$2^{n}$，右移$n$位相当于除以$2^{n}$。
+
+### 代码
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main() { 
+    int a = 60; // 二进制: 0011 1100 
+    int b = 13; // 二进制: 0000 1101 
+    int result = 0; 
+    result = a & b; // 按位与 
+    printf("a & b = %d\n", result); // 输出: 12 (二进制: 0000 1100) 
+    result = a | b; // 按位或 
+    printf("a | b = %d\n", result); // 输出: 61 (二进制: 0011 1101) 
+    result = a ^ b; // 按位异或 
+    printf("a ^ b = %d\n", result); // 输出: 49 (二进制: 0011 0001) 
+    result = ~a; // 按位取反 
+    printf("~a = %d\n", result); // 输出: -61 (二进制: 1100 0011) 
+    result = a << 2; // 左移2位 
+    printf("a << 2 = %d\n", result); // 输出: 240 (二进制: 1111 0000) 
+    result = a >> 2; // 右移2位 
+    printf("a >> 2 = %d\n", result); // 输出: 15 (二进制: 0000 1111) 
+ 
+    return 0; 
+} 
+```
