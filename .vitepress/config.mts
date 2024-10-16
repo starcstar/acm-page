@@ -10,6 +10,7 @@ const vitepressSidebarOptions = {
   //includeRootIndexFile: true,
   useFolderLinkFromIndexFile: true,
   excludeFilesByFrontmatterFieldName: 'marp',
+  frontmatterTitleFieldName: 'name',
 };
 
 // https://vitepress.dev/reference/site-config
