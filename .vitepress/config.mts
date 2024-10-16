@@ -22,7 +22,19 @@ export default defineConfig({
   },
   lastUpdated: true,
   head: [
-    ['link', { rel: 'icon', href: '/acm.png' }]
+    ['link', { rel: 'icon', href: '/acm.png' }],
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-G8GBZPDD1F' }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G8GBZPDD1F');`
+    ]
   ],
   themeConfig: {
     logo: '/acm.png',
