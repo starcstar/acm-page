@@ -11,5 +11,8 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^11.0.0"
+  }
 }
