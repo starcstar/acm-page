@@ -14,5 +14,6 @@ find "$SEARCH_DIR" -type f -name "slide.md" | while read -r file; do
     # 创建对应的输出目录
     mkdir -p "$OUTPUT_DIR/$dir_path"
     # 编译成PDF并放在对应的输出目录
-    npx @marp-team/marp-cli@latest "$file" --pdf --output "$OUTPUT_DIR/$relative_path.pdf"
+    echo "Running command: marp \"$file\" -o \"$OUTPUT_DIR/$dir_path/slide.pdf\""
+    npx @marp-team/marp-cli@latest "$file" -o "$OUTPUT_DIR/$dir_path/slide.pdf"
 done

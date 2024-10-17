@@ -32,6 +32,14 @@ jobs:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
       - name: Build Marp Slide
         run: bash ./scripts/build.sh
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+      - name: Install Goole Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt install ./google-chrome-stable_current_amd64.deb
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
