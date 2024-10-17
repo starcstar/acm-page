@@ -50,3 +50,6 @@ for file in files:
 
     compile_file(file, output_dir, 'pdf')
     compile_file(file, output_dir, 'html')
+    
+    os.remove(file)
+    print(f'Deleted original file: {file}')
