@@ -42,7 +42,7 @@ jobs:
         run: |
           sudo apt-get install -y fonts-noto-cjk
       - name: Build Marp Slide
-        run: python3 .scripts/build-marp.py
+        run: python3 scripts/build-marp.py
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
