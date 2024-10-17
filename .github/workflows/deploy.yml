@@ -40,7 +40,7 @@ jobs:
           sudo apt install ./google-chrome-stable_current_amd64.deb
       - name: Install CJK Fonts
         run: |
-          sudo apt-get install -y fonts-noto-cjk
+          sudo apt install ttf-wqy-zenhei
       - name: Build Marp Slide
         run: python3 scripts/build-marp.py
       - name: Build And Deploy
