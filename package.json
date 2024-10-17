@@ -12,7 +12,5 @@
     "docs:preview": "vitepress preview"
   },
   "license": "MIT",
-  "dependencies": {
-    "glob": "^11.0.0"
-  }
+  "dependencies": {}
 }
