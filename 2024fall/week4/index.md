@@ -239,17 +239,33 @@ void bubbleSort(int arr[], int n) {
  
 ### 递归结构的时间复杂度分析
 
-主定理（Master Theorem）用于分析分治算法的时间复杂度，适用于形如 $T(n) = aT\left(\frac{n}{b}\right) + f(n)$ 的递归关系式，其中：
+主定理（Master Theorem）用于分析分治算法的时间复杂度，适用于形如 
+
+$$T(n) = aT\left(\frac{n}{b}\right) + f(n)$$ 
+
+的递归关系式，其中：
 
 - $T(n)$：问题规模为 $n$ 时的运行时间
 - $a$：递归调用次数
 - $n/b$：每次递归输入规模，$b > 1$
 - $f(n)$：当前层的计算工作
 
-主定理解决以下形式的递归关系：
-$T(n) = aT\left(\frac{n}{b}\right) + f(n)$
-其中 $a \ge 1$ 和 $b > 1$ 为常数，$f(n)$ 为给定函数。
+::: tip 主定理的三种情况
+1. 如果 $f(n) = O(n^{\log_{b}a-\epsilon})$，其中 $\epsilon > 0$，则 $T(n) = \Theta(n^{\log_{b}a})$。
+2. 如果 $f(n) = \Theta(n^{\log_{b}a})$，则 $T(n) = \Theta(n^{\log_{b}a} \log n)$。
+3. 如果 $f(n) = \Omega(n^{\log_{b}a+\epsilon})$，其中 $\epsilon > 0$，$a f\left(\frac{n}{b}\right) \le k f(n)$，其中 $k < 1$ 和 $n$ 足够大，则 $T(n) = \Theta(f(n))$。
+:::
 
+::: details 主定理的证明
+1. 证明第一种情况：$f(n) = O(n^{\log_{b}a-\epsilon})$，其中 $\epsilon > 0$，则 $T(n) = \Theta(n^{\log_{b}a})$。
+
+    由于 $f(n) = O(n^{\log_{b}a-\epsilon})$，所以存在一个常数 $c$ 使得 $f(n) \le c n^{\log_{b}a-\epsilon}$ 对于所有足够大的 $n$ 成立。因此，我们有：
+    $$a f\left(\frac{n}{b}\right) \le a c\left(\frac{n}{b}\right)^{\log_{b}a-\epsilon} = c n^{\log_{b}a-\epsilon} = c f(n)$$
+    由于 $f(n) = O(n^{\log_{b}a-\epsilon})$，所以 $a f\left(\frac{n}{b}\right) \le k f(n)$ 对于所有足够大的 $n$ 成立，其中 $k = c < 1$。因此，根据主定理的第三种情况，$T(n) = \Theta(f(n)) = \Theta(n^{\log_{b}a})$。
+
+2. 证明第二种情况：$f(n) = \Theta(n^{\log_{b}a})$，则 $T(n) = \Theta(n^{\log_{b}a} \log n)$。
+3. 证明第三种情况：$f(n) = \Omega(n^{\log_{b}a+\epsilon})$，其中 $\epsilon > 0$，$a f\left(\frac{n}{b}\right) \le k f(n)$，其中 $k < 1$ 和 $n$ 足够大，则 $T(n) = \Theta(f(n))$。
+:::
 
 ## 分析三种求最大公约数的算法的算法复杂度
 
