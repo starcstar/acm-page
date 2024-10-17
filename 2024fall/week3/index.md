@@ -12,7 +12,7 @@ $AtomFirst$
 
 2024-10-12
 
-[幻灯片(PDF)](../week3.pdf)
+[幻灯片(PDF)](./slide.pdf)
 
 ## 引论
 

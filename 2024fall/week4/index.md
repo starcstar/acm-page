@@ -10,6 +10,8 @@ Kareninahui
 
 2024-10-18
 
+[幻灯片(PDF)](./slide.pdf)
+
 ## 什么是算法
 
 ### 定义

@@ -4,6 +4,12 @@
 
 Website: [https://acm.starcstar.club](https://acm.starcstar.club)
 
+## Generate Slides
+
+```bash
+python3 scripts/build-marp.py
+```
+
 ## Build
 
 ```bash
