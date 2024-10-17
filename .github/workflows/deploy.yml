@@ -1,6 +1,6 @@
 # 构建 VitePress 站点并将其部署到 dist 分支的示例工作流程
 #
-name: Deploy VitePress site to dist branch
+name: Deploy VitePress site to Azure Static Web Apps
 
 on:
   # 在针对 `main` 分支的推送上运行。如果你
@@ -23,13 +23,15 @@ concurrency:
 
 jobs:
   # 构建工作
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+      - name: Build Marp Slide
+        run: bash ./scripts/build.sh
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
