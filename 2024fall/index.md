@@ -41,4 +41,6 @@ description: ACM 竞赛队新生培训 2024秋
 
 [第四周讲义](./week4/)
 
+[幻灯片(PDF)-校内查看](https://pan.nuaa.edu.cn/share/53d1e26e4ff7cc7cafd885f772)
+
 // To be updated
