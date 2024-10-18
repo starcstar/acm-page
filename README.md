@@ -22,3 +22,7 @@ yarn run docs:build
 ```bash
 yarn run docs:dev
 ```
+
+Any files named `slide.md` in the `docs` directory will be automatically rendered as marp slides.
+
+Any changes to the `main` branch will be automatically deployed to the website.

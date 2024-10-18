@@ -47,7 +47,7 @@ jobs:
           sudo cp SarasaMonoSC/*.ttf /usr/share/fonts/truetype/sarasa-gothic/
           sudo fc-cache -fv
       - name: Build Marp Slide
-        run: python3 scripts/build-marp.py
+        run: python3 scripts/build-marp.py --delete
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1

@@ -1,6 +1,12 @@
 import os
 import subprocess
 from glob import glob
+import argparse
+
+# 解析命令行参数
+parser = argparse.ArgumentParser(description='Compile Markdown files to PDF and HTML using Marp.')
+parser.add_argument('--delete', action='store_true', help='Delete original Markdown files after conversion')
+args = parser.parse_args()
 
 # 指定搜索的根目录
 SEARCH_DIR = '2024fall'
@@ -9,7 +15,6 @@ OUTPUT_DIR = os.path.join('public', SEARCH_DIR)
 
 # 查找所有名为slide.md的文件
 files = glob(f'{SEARCH_DIR}/**/slide.md', recursive=True)
-
 
 def compile_file(file, output_dir, format):
     output_file_path = os.path.join(output_dir, f'slide.{format}')
@@ -51,5 +56,7 @@ for file in files:
     compile_file(file, output_dir, 'pdf')
     compile_file(file, output_dir, 'html')
     
-    os.remove(file)
-    print(f'Deleted original file: {file}')
+    # 如果命令行参数中包含 --delete，则删除原始的 Markdown 文件
+    if args.delete:
+        os.remove(file)
+        print(f'Deleted original file: {file}')
