@@ -6,7 +6,7 @@
             repoid="R_kgDOM3nDrA"
             category="Announcements"
             categoryid="DIC_kwDOM3nDrM4CjeF-"
-            mapping="pathname"
+            mapping="title"
             term="Welcome to giscus!"
             reactionsenabled="1"
             emitmetadata="0"
