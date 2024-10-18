@@ -4,7 +4,7 @@ mathjax: true
 
 # 算法入门与数学基础
 
-Kareninahui
+$Kareninahui$
 
 南京航空航天大学
 
