@@ -6,7 +6,7 @@ prev:
 ---
 # C++ 语法基础 Ⅱ 与 STL 入门
 
-$AtomFirst$
+by <span style="color: #0000FF;">**AtomFirst**</span>
 
 南京航空航天大学
 
