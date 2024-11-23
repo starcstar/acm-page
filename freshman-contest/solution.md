@@ -6,6 +6,11 @@ by <span style="color: #FF8C00;">**Niolle_Semis**</span>, <span style="color: #A
 
 签到，这道题考察一些基本的语法，根据题意，我们不妨开一个`bool`数组，然后依次读取每个操作，先判断给定的位置是否合法（即是否在`1`到`n`之间），如果读入到`alloc`，就将对应的位置置为`true`，如果读入到`free `，就将对应的位置置为`false`，如果所在位置已经是`true`/`false`，就输出`Illegal operation`，否则输出`All operations are safe`。
 
+**完整代码**
+```cpp
+<!--@include: ./std/a.cpp-->
+```
+
 ## D 輪符雨
 思考一下每次选取 $1 \leq i < j \leq n$ ，并进行 $a[i] + 1, a[j] - 1$ 会产生什么宏观意义上的影响：
 
@@ -32,6 +37,11 @@ $$ \lfloor \frac{\sum a }{n} \rfloor, \lfloor \frac{\sum a }{n} \rfloor, \dots, 
 归纳多次后，便证明了上述结论。
 
 由于每种有序序列都有方法转移到答案这种情况（把它想象成一个 DAG），而操作步骤次数必然是有限次，即使是随机往下跳，最终也能跳到答案。
+
+**完整代码**
+```cpp
+<!--@include: ./std/d.cpp-->
+```
 
 ## E 焚音打
 
@@ -86,11 +96,22 @@ $$
 
 
 综上所述，当且仅当 $k = 1$ 时，灯是亮着的。
+
+**完整代码**
+```cpp
+<!--@include: ./std/e.cpp-->
+```
+
 ## H Life Will Change
 
 遍历排列 `p`，每当 `p[i]` 不等于 `i` 时，需要将 `p[i]` 与其正确位置的元素交换。直接查找每个元素的目标位置会导致 $O(n^2)$ 的复杂度。为优化查找过程，我们引入一个数组 `q`，其中 `q[p[i]] = i`，即 `q[x]` 记录值为 `x` 的元素所在位置。
 
 这样，在遍历时，如果发现 `p[i] ≠ i`，可以通过 `q` 数组直接找到 `p[i]` 的目标位置 `j`，将 `p[i]` 与 `p[j]` 交换，并更新 `q` 数组。整个过程的复杂度从 $O(n^2)$ 降低到 $O(n)$。
+
+**完整代码**
+```cpp
+<!--@include: ./std/h.cpp-->
+```
 
 ## M INFINITY
 
@@ -177,6 +198,11 @@ int main() {
 
 注意应满足 $t_k \ge n$，即 $k(k-1)/2 \ge n$，解得 $k=\lceil \frac{-1+\sqrt{8n+1}}{2} \rceil$ 。
 
+**完整代码**
+```cpp
+<!--@include: ./std/c.cpp-->
+```
+
 ## F Distortion!!
 
 一个简单的解法是尝试所有满足 $1 \leq L \leq R \leq N$ 的 $(L, R)$ 对，找到所有可能的 $S$，并输出这些字符串和原始字符串 $S$ 中按字典序最小的一个。
@@ -210,6 +236,11 @@ int main() {
 
 由此可见，我们需要检查的字符串数量从 $\mathrm{O}(N^2)$ 降低到 $\mathrm{O}(N)$，整体复杂度为 $\mathrm{O}(N^2)$，这已经足够高效。
 
+**完整代码**
+```cpp
+<!--@include: ./std/f.cpp-->
+```
+
 
 ## J 空の箱
 
@@ -224,6 +255,11 @@ int main() {
 
 4. 继续二分，直到区间收敛，得到最终答案。
 
+**完整代码**
+```cpp
+<!--@include: ./std/j.cpp-->
+```
+
 ## L 视野一隅
 
 $O(n^3)$做法：就是01背包，设$dp[i][j]$表示前i个数中选择的区间长度为j的最大价值
@@ -233,6 +269,11 @@ $O(n^3)$做法：就是01背包，设$dp[i][j]$表示前i个数中选择的区�
 $$dp[i][j]=max\set{\max\limits_{k=1}^{j}\set{dp[i-k][j-k]+abs(b_i-a_{j-k+1})},dp[i-1][j]}$$
 
 有$O(n^2)$做法，有兴趣可以问出题人 <span style="color: #FF8C00;">**Niolle_Semis**</span> qwq 
+
+**完整代码**
+```cpp
+<!--@include: ./std/l.cpp-->
+```
 
 ## B CF与睡眠与蓝色星球
 
@@ -250,11 +291,21 @@ $$dp[i][j]=max\set{\max\limits_{k=1}^{j}\set{dp[i-k][j-k]+abs(b_i-a_{j-k+1})},dp
 
 时间复杂度 $O(m\log n + n\log n)$
 
+**完整代码**
+```cpp
+<!--@include: ./std/b.cpp-->
+```
+
 ## G 名無声
 
 由于对于每节课不能去上的概率是均等的，所以每节课翘掉的概率都是$\frac kn$
 
 答案就是$\frac kn\sum\limits_{i=1}^n\frac{a_i}{b_i}$
+
+**完整代码**
+```cpp
+<!--@include: ./std/g.cpp-->
+```
 
 ## K Savourons les moments
 
@@ -274,6 +325,11 @@ $$dp[i][j]=max\set{\max\limits_{k=1}^{j}\set{dp[i-k][j-k]+abs(b_i-a_{j-k+1})},dp
 - 令杨辉三角首行为第 0 行，首列为第 0 列，第 $i$ 行第 $j$ 列的值即为 $\binom{i}{j}$
 - 利用exgcd或快速幂求逆元，预处理前缀\后缀积后计算
 
+**完整代码**
+```cpp
+<!--@include: ./std/k.cpp-->
+```
+
 ## I 若成为星座
 
 容斥问题，总方案数为
@@ -290,3 +346,8 @@ $$S_3=A_{B-b_1-b_2+2}^2\times A_{A-a_1-a_2+2}^2$$
 
 答案即为
 $$S_1+S_2-S_3$$
+
+**完整代码**
+```cpp
+<!--@include: ./std/i.cpp-->
+```
