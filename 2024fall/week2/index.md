@@ -3,7 +3,7 @@ math: mathjax
 ---
 # C++ 语法基础 Ⅰ
 
-$CAFEBABE$
+by <span style="color: #0000FF;">**4627488**</span>
 
 南京航空航天大学
 
