@@ -256,9 +256,15 @@ int main() {
 4. 继续二分，直到区间收敛，得到最终答案。
 
 **完整代码**
-```cpp
+::: code-group
+```cpp [C++]
 <!--@include: ./std/j.cpp-->
 ```
+
+```rust [Rust]
+<!--@include: ./std/j.rs-->
+```
+:::
 
 ## L 视野一隅
 
@@ -271,9 +277,16 @@ $$dp[i][j]=max\set{\max\limits_{k=1}^{j}\set{dp[i-k][j-k]+abs(b_i-a_{j-k+1})},dp
 有$O(n^2)$做法，有兴趣可以问出题人 <span style="color: #FF8C00;">**Niolle_Semis**</span> qwq 
 
 **完整代码**
-```cpp
+
+::: code-group
+```cpp [C++]
 <!--@include: ./std/l.cpp-->
 ```
+
+```rust [Rust]
+<!--@include: ./std/l.rs-->
+```
+:::
 
 ## B CF与睡眠与蓝色星球
 
