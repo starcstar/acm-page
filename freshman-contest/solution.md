@@ -2,7 +2,7 @@
 
 by <span style="color: #FF8C00;">**Niolle_Semis**</span>, <span style="color: #AA00AA;">**DGME**</span>, <span style="color: #0000FF;">**AtomFirst**</span>, <span style="color: #FF8C00;">**Sgdd**</span>, <span style="color: #0000FF;">**4627488**</span>
 
-[补题链接](https://www.luogu.com.cn/training/657361/)
+[补题链接](https://www.luogu.com.cn/training/657361)
 
 ## A RUST
 
