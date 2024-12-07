@@ -51,4 +51,4 @@ description: ACM 竞赛队新生培训 2024秋
 
 [第五周讲义](./week5/)
 
-// To be updated
+[幻灯片(PDF)-校内查看](./week5/slide.pdf)

@@ -2,6 +2,8 @@
 
 by <span style="color: #FF8C00;">**Niolle_Semis**</span>, <span style="color: #AA00AA;">**DGME**</span>, <span style="color: #0000FF;">**AtomFirst**</span>, <span style="color: #FF8C00;">**Sgdd**</span>, <span style="color: #0000FF;">**4627488**</span>
 
+[补题链接](hhttps://www.luogu.com.cn/training/657361/)
+
 ## A RUST
 
 签到，这道题考察一些基本的语法，根据题意，我们不妨开一个`bool`数组，然后依次读取每个操作，先判断给定的位置是否合法（即是否在`1`到`n`之间），如果读入到`alloc`，就将对应的位置置为`true`，如果读入到`free `，就将对应的位置置为`false`，如果所在位置已经是`true`/`false`，就输出`Illegal operation`，否则输出`All operations are safe`。
