@@ -2,3 +2,4 @@
 node_modules
 dist
 public/2024fall
+.yarn/install-state.gz

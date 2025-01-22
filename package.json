@@ -1,9 +1,9 @@
 {
   "devDependencies": {
-    "@giscus/vue": "^3.0.0",
+    "@giscus/vue": "^3.1.1",
     "markdown-it-mathjax3": "^4.3.2",
-    "vitepress": "^1.3.4",
-    "vitepress-sidebar": "1.29.1"
+    "vitepress": "^1.6.1",
+    "vitepress-sidebar": "1.30.2"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
@@ -11,5 +11,9 @@
     "docs:preview": "vitepress preview"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "@algolia/client-search": "^5.19.0",
+    "algoliasearch": "^5.19.0",
+    "search-insights": "^2.17.3"
+  }
 }
