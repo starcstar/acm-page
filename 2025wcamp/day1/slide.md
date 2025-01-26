@@ -42,7 +42,7 @@ $f(s) = \sum_{i=1}^{l} s[i] \times b^{l-i} \pmod M$。
 
 ---
 # Hash Code
-~~~
+~~~cpp
 int M = 1e9 + 7;
 int B = 233;
 using ll = long long;
@@ -69,7 +69,7 @@ bool cmp(string s,string t) {
 ---
 # 双值Hash Code
 
-```
+```cpp
 int M = 1e9 + 7, m = 998244353;
 int B = 233;
 using ll = long long;
@@ -126,7 +126,7 @@ bool cmp(string s,string t) {
 # 题解
 马拉车板子，但是也有个很经典的哈希做法，即二分+Hash
 如何判断字符串是否是哈希呢？只需要某个区间正着的Hash值和反着的Hash值相同
-```
+```cpp
 //判断是否为回文串
 bool check(string s) {
   string t = ReverseString(s); //t是s的翻转串
@@ -212,7 +212,7 @@ $\underbrace{\overbrace{s_0 ~ s_1 ~ s_2}^{\pi[i] = 3} ~ s_3}_{\pi[i+1] = 4} ~ \d
 
 ---
 # Code
-```
+```cpp
 vector<int> prefix_function(string s) {
   int n = (int)s.length();
   vector<int> pi(n);
@@ -237,7 +237,7 @@ $\overbrace{\underbrace{s_0 ~ s_1}_j ~ s_2 ~ s_3}^{\pi[i]} ~ \dots ~ \overbrace{
 # KMP Code
 显然我们可以得到一个关于 j 的状态转移方程：$j^{(n)}=\pi[j^{(n-1)}-1], \ \ (j^{(n-1)}>0)$
 结合上述的两个优化，可以得到时间复杂度为$O(n)$的求解前缀函数的做法，即KMP算法
-```
+```cpp
 vector<int> prefix_function(string s) {
   int n = (int)s.length();
   vector<int> pi(n);
@@ -277,7 +277,7 @@ border ：若字符串 $s$ 存在某个真前缀和某个真后缀相同，则�
 
 ---
 # Code
-```
+```cpp
 vector<int> find_occurrences(string text, string pattern) {
   string cur = pattern + '#' + text;
   int sz1 = text.size(), sz2 = pattern.size();
@@ -312,7 +312,7 @@ vector<int> find_occurrences(string text, string pattern) {
 
 ---
 # Code
-```
+```cpp
 vector<int> ans(n + 1);
 for (int i = 0; i < n; i++) ans[pi[i]]++;
 for (int i = n - 1; i > 0; i--) ans[pi[i - 1]] += ans[i];
