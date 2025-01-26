@@ -11,6 +11,7 @@ const vitepressSidebarOptions = {
   useFolderLinkFromIndexFile: true,
   excludeFilesByFrontmatterFieldName: "marp",
   frontmatterTitleFieldName: "name",
+  excludePattern: ["README.md"],
 };
 
 // https://vitepress.dev/reference/site-config

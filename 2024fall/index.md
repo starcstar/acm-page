@@ -1,10 +1,4 @@
----
-lang: zh-CN
-title: ACM 竞赛队新生培训 2024秋
-description: ACM 竞赛队新生培训 2024秋
----
-
-# ACM 竞赛队新生培训 2024秋
+# 2024秋 ACM 竞赛队新生培训 
 
 ## 第一周: 介绍XCPC、IDE的使用 <Badge type="tip" text="@天目湖B8-119 Sep 22 19:00-20:00" />
 
