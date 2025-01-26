@@ -49,7 +49,7 @@ export default defineConfig({
       { text: "2024 新生赛", link: "/freshman-contest" },
       { text: "2025 寒假线上培训", link: "/2025wcamp" },
     ],
-
+    outlineTitle: "目录",
     sidebar: generateSidebar(vitepressSidebarOptions),
 
     socialLinks: [
