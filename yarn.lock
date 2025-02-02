@@ -2659,6 +2659,7 @@ __metadata:
     search-insights: "npm:^2.17.3"
     vitepress: "npm:^1.6.3"
     vitepress-sidebar: "npm:1.30.2"
+    vue: "npm:^3.5.13"
   languageName: unknown
   linkType: soft
 

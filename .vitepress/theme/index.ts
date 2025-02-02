@@ -1,12 +1,8 @@
-import { h } from 'vue';
-import Theme from 'vitepress/theme';
-import GiscusComment from './components/comment.vue';
+import DefaultTheme from "vitepress/theme";
+import Layout from "./Layout.vue";
 
 export default {
-    ...Theme,
-    Layout() {
-        return h(Theme.Layout, null, {
-            'doc-after': () => h(GiscusComment),
-        });
-    },
+  extends: DefaultTheme,
+  // 使用注入插槽的包装组件覆盖 Layout
+  Layout: Layout,
 };
