@@ -23,6 +23,7 @@ export default defineConfig({
     hostname: "https://acm.starcstar.club",
   },
   lastUpdated: true,
+  cleanUrls: true,
   head: [
     ["link", { rel: "icon", href: "/acm.png" }],
     [

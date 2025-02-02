@@ -1,6 +1,6 @@
 # 字符串算法与哈希技巧
 
-主讲 ：赵乐坤
+By <CodeforcesUser username="Niolle" />
 
 
 # Hash
