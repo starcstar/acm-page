@@ -55,12 +55,12 @@ By <CodeforcesUser username="4627488" />
   - 连通图：任意两顶点间存在**路径**（无向图）。  
   - 强连通图：任意两顶点双向可达（有向图）。  
 
-## 子图
-### 无向图
+### 子图
+#### 无向图
 - 定义：$G' = (V', E')$ 是 $G = (V, E)$ 的子图，当且仅当 $V' \subseteq V$ 且 $E' \subseteq E$。
 - 若对 $H \subseteq G$，满足 $\forall u, v \in V'$，只要 $(u, v) \in E$，均有 $(u, v) \in E'$，则称 $H$ 是 $G$ 的 **导出子图/诱导子图 (induced subgraph)**。
 
-### 有向图
+#### 有向图
 - 定义：$G' = (V', E')$ 是 $G = (V, E)$ 的子图，当且仅当 $V' \subseteq V$ 且 $E' \subseteq E$。
 - 若对 $H \subseteq G$，满足 $\forall u, v \in V'$，只要 $u \to v \in E$，均有 $u \to v \in E'$，则称 $H$ 是 $G$ 的 **导出子图/诱导子图 (induced subgraph)**。
 
@@ -205,15 +205,23 @@ void bfs(TreeNode* root) {
 | 后序     | $2 \to 3 \to 1$                   |
 | 层次     | $1 \to 2 \to 3$                   |
 
-### 一种新的二叉树非递归遍历方法 <Badge text="AtomFans" type="tip" vertical="middle"/>
-
-将前序、中序、后序遍历的非递归遍历方法统一到了一个框架下，非常巧妙。 
+### 一种新的二叉树非递归遍历方法 <Badge text="AtomFirst" type="tip" vertical="middle"/>
 
 [一种新的二叉树非递归遍历方法](https://mp.weixin.qq.com/s/FyInwZApXYkr2FPMZm2QhQ)
 
 :::details 点击查看代码
-<<< atomfirst.cpp
+::: code-group
+<<< atomfirst.cpp [原版]
+
+<<< atomfirst2.cpp [导演剪辑版]
 :::
+
+#### 递归函数转非递归的一般方法 
+
+1. 找到函数的所有局部变量 $S$（包括参数）
+2. 用一个变量 `PC` 表示函数内应执行的下一条语句
+3. 使用栈存储 $S$ 和 `PC`
+4. 每次根据栈顶信息执行指令，并更新 $S$ 和 `PC` 及进行入栈（函数调用）和出栈（函数结束）操作
 
 ## 总结
 ### 关键知识点  
