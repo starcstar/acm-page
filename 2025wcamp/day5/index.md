@@ -1,6 +1,6 @@
 # 最短路径问题
 
-By Coel
+By <CodeforcesUser username="Coeldesu" />
 
 [幻灯片PDF](./slide.pdf)
 

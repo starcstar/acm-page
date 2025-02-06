@@ -44,7 +44,7 @@ export default {
                 'newbie': '#808080'
             }
 
-            return colorMap[rank.toLowerCase()] || '#000000'
+            return colorMap[rank.toLowerCase()] || '#808080'
         }
     }
 }
