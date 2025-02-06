@@ -49,7 +49,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
         <template #doc-footer-before>
             <p style="color: gray;">
                 本文档采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
-                    style="font-weight: bold; color: blue">CC BY SA 4.0</a>
+                    style="font-weight: bold; color: gray">CC BY SA 4.0</a>
                 协议进行许可，附加条款亦适用。
             </p>
         </template>
