@@ -258,7 +258,7 @@ border ：若字符串 $s$ 存在某个真前缀和某个真后缀相同，则�
 
 
 #### Code
-```
+```cpp
 vector<int> find_occurrences(string text, string pattern) {
   string cur = pattern + '#' + text;
   int sz1 = text.size(), sz2 = pattern.size();
@@ -295,7 +295,7 @@ vector<int> find_occurrences(string text, string pattern) {
 
 
 #### Code
-```
+```cpp
 vector<int> ans(n + 1);
 for (int i = 0; i < n; i++) ans[pi[i]]++;
 for (int i = n - 1; i > 0; i--) ans[pi[i - 1]] += ans[i];
