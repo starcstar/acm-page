@@ -50,7 +50,7 @@ jobs:
         run: python3 scripts/build-marp.py --delete
       - name: Install Dependencies
         run: |
-          corepack install
+          corepack enable
           yarn install
       - name: Build VitePress site
         run: yarn docs:build
