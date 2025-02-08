@@ -48,6 +48,15 @@ jobs:
           sudo fc-cache -fv
       - name: Build Marp Slide
         run: python3 scripts/build-marp.py --delete
+      - name: Install Dependencies
+        run: yarn install
+      - name: Build VitePress site
+        run: yarn docs:build
+      - name: Push to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .vitepress/dist
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1

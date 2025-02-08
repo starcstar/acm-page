@@ -4,6 +4,7 @@ theme: beam
 
 header: '2025 寒假线上培训'
 footer: 南京航空航天大学程序设计竞赛队
+math: mathjax
 ---
 
 
@@ -167,16 +168,13 @@ void dfs(TreeNode* node) {
     cout << node->val << endl;
     dfs(node->left);
     dfs(node->right);
-
-    // 中序：调整print位置
-    // 后序：调整print位置
 }
 ```
 
-- 应用场景：  
-  - 前序：克隆树结构、序列化。  
-  - 中序：二叉搜索树（BST）升序输出。  
-  - 后序：释放树内存（先处理子节点）。  
+应用场景：  
+- 前序：克隆树结构、序列化。  
+- 中序：二叉搜索树（BST）升序输出。  
+- 后序：释放树内存（先处理子节点）。  
 
 
 ---
