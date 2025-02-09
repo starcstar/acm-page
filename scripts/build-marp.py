@@ -27,8 +27,13 @@ for search_dir in SEARCH_DIRS:
 
 def compile_file(file, output_dir, format):
     output_file_path = os.path.join(output_dir, f"slide.{format}")
-    # 转换成绝对路径
     output_file_path = os.path.abspath(output_file_path)
+    
+    # 检查文件是否已经存在
+    if os.path.exists(output_file_path):
+        print(f"Skipping {file}, {format.upper()} already exists.")
+        return
+    
     # 读取frontmatter yaml
     with open(file, "r") as f:
         lines = f.readlines()
@@ -86,3 +91,22 @@ for file in files:
     if args.delete:
         os.remove(file)
         print(f"Deleted original file: {file}")
+
+pdf_files = []
+for search_dir in SEARCH_DIRS:
+    pdf_files.extend(glob(f"{search_dir}/**/*.pdf", recursive=True))
+
+print(f"Found {len(pdf_files)} PDF files")
+print("PDF files found:")
+for file in pdf_files:
+    print(f"  {file}")
+
+# 拷贝源代码目录的 PDF 文件到 public 目录
+for file in pdf_files:
+    relative_path = os.path.relpath(file)
+    output_path = os.path.join(OUTPUT_DIR, relative_path)
+    output_dir = os.path.dirname(output_path)
+    print(f"Creating output directory: {output_dir}")
+    os.makedirs(output_dir, exist_ok=True)
+    print(f"Copying {file} to {output_path}")
+    os.replace(file, output_path)

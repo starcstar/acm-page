@@ -22,22 +22,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # 构建工作
-  build-and-deploy:
+  build-slide:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
-      - name: Install Google Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install ./google-chrome-stable_current_amd64.deb
       - name: Install Sarasa Gothic Fonts
         run: |
           sudo apt-get install -y p7zip-full
@@ -48,10 +40,32 @@ jobs:
           sudo fc-cache -fv
       - name: Build Marp Slide
         run: python3 scripts/build-marp.py --delete
+      - name: Upload Marp Slide
+        uses: actions/upload-artifact@v4
+        with:
+          name: marp-slide
+          path: | 
+            public/**/*.pdf
+            public/**/*.html
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    needs: build-slide
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
       - name: Install Dependencies
         run: |
           corepack enable
           yarn install
+      - name: Download Marp Slide
+        uses: actions/download-artifact@v4
+        with:
+          name: marp-slide
       - name: Build VitePress site
         run: yarn docs:build
       - name: Push to gh-pages
