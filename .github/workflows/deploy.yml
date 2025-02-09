@@ -66,6 +66,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: marp-slide
+          path: public
       - name: Build VitePress site
         run: yarn docs:build
       - name: Push to gh-pages
