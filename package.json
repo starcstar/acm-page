@@ -3,7 +3,7 @@
     "@giscus/vue": "^3.1.1",
     "markdown-it-mathjax3": "^4.3.2",
     "vitepress": "^1.6.3",
-    "vitepress-sidebar": "1.30.2"
+    "vitepress-sidebar": "1.33.0"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
@@ -12,10 +12,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@algolia/client-search": "^5.20.0",
-    "algoliasearch": "^5.20.0",
+    "@algolia/client-search": "^5.34.1",
+    "algoliasearch": "^5.34.1",
     "search-insights": "^2.17.3",
-    "vue": "^3.5.13"
+    "vue": "^3.5.18"
   },
   "packageManager": "yarn@4.6.0"
 }
