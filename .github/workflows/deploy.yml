@@ -56,19 +56,18 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
       - name: Install Dependencies
         run: |
-          corepack enable
-          yarn install
+          bun install
       - name: Download Marp Slide
         uses: actions/download-artifact@v4
         with:
           name: marp-slide
           path: public
       - name: Build VitePress site
-        run: yarn docs:build
+        run: bun docs:build
       - name: Push to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
